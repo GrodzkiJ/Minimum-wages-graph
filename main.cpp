@@ -67,16 +67,17 @@ int main()
     {
         for (int j = 0; j < 7; j++)
         {
-            cout << "( " << adj[i][j].first << ", " << adj[i][j].second << ") ";
+            std::cout << "( " << adj[i][j].first << ", " << adj[i][j].second << ") ";
         }
-        cout << endl;
+        std::cout << endl;
     }
-    cout << endl;
+    std::cout << endl;
     int suma_wag = 0;
     int nast_wiersz = 2;
     int kolejne_miasto = 0;
     int il_odwiedzone = 1;
     int odwiedzone[7];
+    char miasta[7] = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
     for (int i = 0; i < 7; i++)
     {
         odwiedzone[i] = 0;
@@ -99,11 +100,11 @@ int main()
             }
             odwiedzone[nast_wiersz] = 1;
         }
-        cout << nast_wiersz << " -> " << kolejne_miasto << endl;
-        cout << "Odleglosc: " << min << endl;
+        std::cout << miasta[nast_wiersz] << " -> " << miasta[kolejne_miasto] << endl;
+        std::cout << "Odleglosc: " << min << endl;
         nast_wiersz = kolejne_miasto;
         suma_wag = suma_wag + min;
         il_odwiedzone++;
     }
-    cout << "Suma  odleglosci: " << suma_wag;
+    std::cout << "Suma  odleglosci: " << suma_wag;
 }
