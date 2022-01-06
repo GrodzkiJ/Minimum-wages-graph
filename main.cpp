@@ -73,7 +73,7 @@ int main()
     }
     std::cout << endl;
     int suma_wag = 0;
-    int nast_wiersz = 2;
+    int nast_wiersz = 6;
     int kolejne_miasto = 0;
     int il_odwiedzone = 1;
     int odwiedzone[7];
